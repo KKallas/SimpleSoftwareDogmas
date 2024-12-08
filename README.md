@@ -9,6 +9,17 @@ Jupyter Lab gives us this perfect playground to develop however feels natural to
 
 Because sometimes the smartest thing we can do is make it easy for others to help us be even smarter.
 
+1. **Keep it simple:** "Strive for simplicity, transparency, and collaboration in your code: Write clear, easily understandable solutions that motivate others to read and contribute. Avoid unnecessary complexity and hidden functionality, as they hinder reliability and knowledge sharing. If you see an opportunity to simplify, speak up and help improve the codebase for everyone."
+   
+2. **100-Line Rule:** Prioritize user experience with straightforward interfaces and manual fallbacks. Keep code modular and concise, adhering to a 100-line limit for functions, classes, and modules. Favor native implementations over complex libraries when possible, especially with the advent of LLMs. Develop iteratively, starting with failing tests, implementing simple solutions, and optimizing thoughtfully while maintaining clarity.
+
+3. **Communicate with Memes:** "Prioritize clear communication and global accessibility in your work: Create self-documenting code with concise, embedded documentation, leveraging LLM tools for automation. Share your creations widely, focusing on simplicity and ease of adoption over complex functionality. Utilize diverse communication methods, including memes and visual content, to convey ideas effectively across cultural and linguistic barriers. Design with inclusivity in mind, ensuring your tools and solutions are accessible and inviting to a global audience of various skill levels."
+
+### Note for the Mavericks Among Us
+If your coding style leans toward crafting an entire script that reads like C code—a veritable monument to efficiency and elegance, yet perhaps impenetrable to the uninitiated—fear not. This system doesn’t cramp your style. You can always enlist an assistant (or leverage the LLM tools baked into this workflow) to translate your ingenious masterpiece into something mere mortals can comprehend and maintain.
+
+After all, every great developer deserves a translator for their genius, and every great system should support the diversity of its creators.
+
 ## 1. LLM-Driven Development Flow
 Development can flow in either direction, leveraging LLMs for translation:
 
