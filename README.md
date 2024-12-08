@@ -148,9 +148,9 @@ project/
 ├── src/                   # Production code
 │   └── package/
 │       ├── __init__.py
-│       ├── layer0.py      # Base functionality
-│       ├── layer1.py      # Additional features
-│       └── layer2.py      # Additional features
+│       ├── layer1.py      # Base functionality
+│       ├── layer2.py      # Additional features
+│       └── layer3.py      # Additional features
 ├── tests/                 # Layered tests
 │   ├── test_layer1.py
 │   ├── test_layer2.py
