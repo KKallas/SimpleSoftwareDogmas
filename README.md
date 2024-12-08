@@ -1,8 +1,12 @@
 
+![logo](https://github.com/user-attachments/assets/5e9ae6e6-2f8b-48b2-b9a6-593ff32ff320)
 # Simple Software Dogmas 3.0
 Even when you're coding at your peak, in that perfect flow state at 3 AM when everything seems crystal clear, your mind can only juggle so many moving pieces. It's like trying to imagine every possible way a tower of blocks could fall - there's always that one angle you didn't consider until someone else points at it and asks 'what about this?'
+
 That's why we keep our code and documentation in bite-sized pieces. Not because we're not capable of handling more, but because we respect how our minds (and others') work best. When each piece is small enough to hold in your mind all at once - around 100 lines of code with its matching documentation right there - something magical happens. You can see all the edges, all the connections, all the 'what-ifs'.
+
 Jupyter Lab gives us this perfect playground to develop however feels natural to us, while the structure of keeping related code and docs together makes it easy for others (or our future selves, or an LLM) to jump in and help. Whether it's spotting an edge case we missed at 3 AM, suggesting a cleaner approach, or just helping us explain what we built - when we keep things human-sized, we make space for collaboration without sacrificing our creative flow.
+
 Because sometimes the smartest thing we can do is make it easy for others to help us be even smarter.
 
 ## 1. LLM-Driven Development Flow
