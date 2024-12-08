@@ -130,27 +130,74 @@ Documentation and code are equal partners:
 
 ## 7. Project structure
 ```
-SimpleSoftwareDogmas/
-├── README.md               # Main principles and quick start
-├── examples/
-│   ├── first_project/      # Complete beginner example
-│   │   ├── prototype/
-│   │   │   └── dev.ipynb   # Example notebook with comments
-│   │   └── final/          # How it looks as package
-│   └── real_projects/      # Links to projects following dogmas
-│
-├── templates/
-│   ├── project_structure/  # Ready to use project folders
-│   └── notebooks/          # Template notebooks with cell structure
-│
-├── tools/
-│   ├── validator.py        # Check if notebook follows structure
-│   └── converter.py        # Help convert prototype to package
-│
-└── docs/
-    ├── workflow.md         # Detailed workflow description
-    ├── llm_prompts.md      # Useful prompts for development
-    └── best_practices.md   # Real examples of good/bad
+project/
+├── prototype/             # Development and experiments
+│   ├── features.ipynb     # Layered development
+│   └── prototyping.ipynb  # Layered development
+├── src/                   # Production code
+│   └── package/
+│       ├── __init__.py
+│       ├── layer0.py      # Base functionality
+│       ├── layer1.py      # Additional features
+│       └── layer2.py      # Additional features
+├── tests/                 # Layered tests
+│   ├── test_layer1.py
+│   ├── test_layer2.py
+│   └── test_layer3.py
+└── docs/                  # Generated from prototypes
+    ├── layer1.md
+    ├── layer2.md
+    └── layer3.md
+```
+ 
+### Layer 1 - Base Class (layer1.py)
+```python
+"""
+Base Text Formatter
+Basic text handling functionality.
+"""
+class TextFormatter:
+    def __init__(self):
+        self.text = ""
+    
+    def set_text(self, text: str) -> None:
+        self.text = text
+        
+    def get_text(self) -> str:
+        return self.text
+```
+### Layer 2 - Additional features (layer2.py)
+```python
+"""
+Case Handling Extension
+Adds uppercase and lowercase text handling.
+"""
+from .layer1 import TextFormatter
+
+class TextFormatter(TextFormatter):
+    def to_upper(self) -> str:
+        return self.text.upper()
+        
+    def to_lower(self) -> str:
+        return self.text.lower()
+```
+### Layer 3 - Additional features (layer3.py)
+```python
+"""
+Line Numbering Extension
+Adds ability to show line numbers.
+"""
+from .layer2 import TextFormatter
+
+class TextFormatter(TextFormatter):
+    def with_line_numbers(self) -> str:
+        lines = self.text.split('\n')
+        return '\n'.join(f"{i+1}: {line}" 
+                        for i, line in enumerate(lines))
+```
+### __init__.py
+```python
+from .layer3 import TextFormatter
 ```
 
 ## 8. Simple User Experience
